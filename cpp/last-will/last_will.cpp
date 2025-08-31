@@ -1,4 +1,5 @@
 // Enter your code below the lines of the families' information
+#include <numeric>
 
 // Secret knowledge of the Zhang family:
 namespace zhang {
@@ -43,3 +44,28 @@ int code_fragment() { return 923; }
 }  // namespace garcia
 
 // Enter your code below
+namespace estate_executor {
+int assemble_account_number(int secret_modifier) {
+    const auto all_bank_numbers = {
+        zhang::bank_number_part(secret_modifier),
+        khan::bank_number_part(secret_modifier),
+        garcia::bank_number_part(secret_modifier),
+    };
+    return std::accumulate(all_bank_numbers.begin(), all_bank_numbers.end(), 0);
+}
+
+int assemble_code() {
+    const auto all_blue_parts = {
+        zhang::blue::code_fragment(),
+        khan::blue::code_fragment(),
+        garcia::blue::code_fragment(),
+    };
+    const auto all_red_parts = {
+        zhang::red::code_fragment(),
+        khan::red::code_fragment(),
+        garcia::red::code_fragment(),
+    };
+    return std::accumulate(all_blue_parts.begin(), all_blue_parts.end(), 0)
+        * std::accumulate(all_red_parts.begin(), all_red_parts.end(), 0);
+}
+}
