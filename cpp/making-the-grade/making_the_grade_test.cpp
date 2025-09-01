@@ -15,8 +15,6 @@ TEST_CASE("Check correct mark conversion (empty)", "[task_1]") {
     REQUIRE(expected == actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
-
 TEST_CASE("Check correct mark conversion (all < 0.5)", "[task_1]") {
     vector<double> input{5.2, 77.1, 91.0};
     vector<int> expected{5, 77, 91};
@@ -122,4 +120,5 @@ TEST_CASE("Several perfect scores", "[task_5]") {
     REQUIRE(expected == actual);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
