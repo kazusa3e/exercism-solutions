@@ -12,8 +12,6 @@ TEST_CASE("Minimal first interest rate", "[task_1]") {
                  Catch::Matchers::WithinRel(want, 0.000001));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
-
 TEST_CASE("Tiny first interest rate", "[task_1]") {
     double balance{0.000001};
     double want{0.5};
@@ -222,4 +220,5 @@ TEST_CASE("Result balance would be exactly same as target", "[task_4]") {
     REQUIRE(years_until_desired_balance(balance, target_balance) == want);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
