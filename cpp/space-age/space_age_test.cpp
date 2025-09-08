@@ -11,7 +11,6 @@ TEST_CASE("age_in_seconds") {
     REQUIRE(age.seconds() == 1000000);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 namespace {
 const double accuracy = 0.005;
 }
@@ -71,4 +70,6 @@ TEST_CASE("age_in_neptune_year") {
     REQUIRE_THAT(age.on_earth(), Catch::Matchers::WithinAbs(260.16, accuracy));
     REQUIRE_THAT(age.on_neptune(), Catch::Matchers::WithinAbs(1.58, accuracy));
 }
+
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
