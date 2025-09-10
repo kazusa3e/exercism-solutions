@@ -6,7 +6,6 @@
 #endif
 
 TEST_CASE("the_sound_for_1_is_1") { REQUIRE("1" == raindrops::convert(1)); }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("the_sound_for_3_is_pling") {
     REQUIRE("Pling" == raindrops::convert(3));
 }
@@ -60,4 +59,6 @@ TEST_CASE("the_sound_for_105_is_plingplangplong_as_it_has_factors_3_5_and_7") {
 TEST_CASE("the_sound_for_3125_is_plang_as_it_has_a_factor_5") {
     REQUIRE("Plang" == raindrops::convert(3125));
 }
+
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
