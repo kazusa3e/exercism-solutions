@@ -39,8 +39,6 @@ TEST_CASE("equilateral triangle -> all sides are equal",
     REQUIRE(triangle::flavor::equilateral == triangle::kind(2, 2, 2));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
-
 TEST_CASE("equilateral triangle -> any side is unequal",
           "[33eb6f87-0498-4ccf-9573-7f8c3ce92b7b]") {
     REQUIRE_FALSE(triangle::flavor::equilateral == triangle::kind(2, 3, 2));
@@ -127,4 +125,5 @@ TEST_CASE("double_and_integer_arguments") {
     REQUIRE(triangle::flavor::scalene == triangle::kind(5.5, 4, 2));
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
