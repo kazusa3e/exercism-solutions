@@ -2,6 +2,7 @@
 
 namespace grains {
 
-// TODO: add your solution here
+unsigned long long square(unsigned n);
+unsigned long long total();
 
 }  // namespace grains
