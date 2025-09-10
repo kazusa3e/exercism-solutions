@@ -7,7 +7,6 @@
 
 TEST_CASE("sentence_empty") { REQUIRE(!pangram::is_pangram("")); }
 
-#ifdef EXERCISM_RUN_ALL_TESTS
 TEST_CASE("pangram_with_only_lower_case") {
     REQUIRE(pangram::is_pangram("the quick brown fox jumps over the lazy dog"));
 }
@@ -43,4 +42,6 @@ TEST_CASE("pangram_with_mixed_case_and_punctuation") {
 TEST_CASE("a_to_m_and_A_to_M_are_26_different_characters_but_not_a_pangram") {
     REQUIRE(!pangram::is_pangram("abcdefghijklm ABCDEFGHIJKLM"));
 }
+
+#ifdef EXERCISM_RUN_ALL_TESTS
 #endif
