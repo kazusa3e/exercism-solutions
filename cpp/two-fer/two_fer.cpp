@@ -2,6 +2,12 @@
 
 namespace two_fer {
 
-// TODO: add your solution here
+std::string two_fer(const std::string &name) {
+    if (name.empty()) {
+        return "One for you, one for me.";
+    } else {
+        return std::string{} + "One for " + name + ", one for me.";
+    }
+}
 
 }  // namespace two_fer
