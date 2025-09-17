@@ -1,7 +1,10 @@
 #pragma once
 
+#include <cstddef>
+#include <string>
+
 namespace hamming {
 
-// TODO: add your solution here
+std::size_t compute(const std::string &a, const std::string &b);
 
 }  // namespace hamming
