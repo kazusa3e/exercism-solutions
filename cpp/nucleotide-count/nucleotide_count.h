@@ -1,7 +1,8 @@
 #pragma once
 
+#include <map>
 namespace nucleotide_count {
 
-// TODO: add your solution here
+std::map<char, int> count(const std::string &s);
 
 }  // namespace nucleotide_count

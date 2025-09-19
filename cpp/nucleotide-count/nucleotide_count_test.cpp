@@ -14,8 +14,6 @@ TEST_CASE("empty_strand") {
     REQUIRE(expected == actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
-
 TEST_CASE("can_count_one_nucleotide_in_single_character_input") {
     const std::map<char, int> expected{{'A', 0}, {'C', 0}, {'G', 1}, {'T', 0}};
     const auto actual = nucleotide_count::count("G");
@@ -44,4 +42,6 @@ TEST_CASE("strand_with_invalid_nucleotides") {
     REQUIRE_THROWS_AS(nucleotide_count::count("AGXXACT"),
                       std::invalid_argument);
 }
+
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
