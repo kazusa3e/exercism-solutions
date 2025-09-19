@@ -2,6 +2,6 @@
 
 namespace collatz_conjecture {
 
-// TODO: add your solution here
+unsigned long long steps(long long int s);
 
 }  // namespace collatz_conjecture
