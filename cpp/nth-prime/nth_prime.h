@@ -2,6 +2,6 @@
 
 namespace nth_prime {
 
-// TODO: add your solution here
+unsigned long long nth(unsigned n);
 
 }  // namespace nth_prime
