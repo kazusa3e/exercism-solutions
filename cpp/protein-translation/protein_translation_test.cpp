@@ -17,7 +17,6 @@ TEST_CASE("Methionine RNA sequence", "[96d3d44f-34a2-4db4-84cd-fff523e069be]") {
             protein_translation::proteins("AUG"));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("Phenylalanine RNA sequence 1",
           "[1b4c56d8-d69f-44eb-be0e-7b17546143d9]") {
@@ -149,4 +148,5 @@ TEST_CASE("Sequence of two non-STOP codons does not translate to a STOP codon",
             protein_translation::proteins("AUGAUG"));
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif  // !EXERCISM_RUN_ALL_TESTS
