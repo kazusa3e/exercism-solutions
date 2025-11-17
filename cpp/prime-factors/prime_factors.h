@@ -1,7 +1,8 @@
 #pragma once
 
+#include <vector>
 namespace prime_factors {
 
-// TODO: add your solution here
+auto of(long long x) -> std::vector<long long>;
 
 }  // namespace prime_factors
